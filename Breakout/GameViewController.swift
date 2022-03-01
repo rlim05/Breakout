@@ -2,7 +2,7 @@
 //  GameViewController.swift
 //  Breakout
 //
-//  Created by Student on 3/1/22.
+//  Created by Ryan Lim on 3/1/22.
 //
 
 import UIKit
