@@ -35,6 +35,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        if contact.bodyA.node?.name == "brick" ||
+            contact.bodyB.node?.name == "brick" {
+            print("You Win!")
+            brick.removeFromParent()
+            ball.removeFromParent()
+        }
+        if contact.bodyA.node?.name == "loseZone" ||
+           contact.bodyA.node?.name == "loseZone" {
+            print("You Lose!")
+            ball.removeFromParent()
+        }
+    }
+    
     func resetGame() {
         makeBall()
         makePaddle()
